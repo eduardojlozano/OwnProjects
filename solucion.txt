@@ -1,0 +1,72 @@
+1--------------------------------------
+a) La primer rama
+b) a >= 5 o a <= 2 o mejor dicho: cualquier entero a excepecion de 3 o 4
+c) Infinitas porque no aumenta k
+
+2--------------------------------------
+a) tiene mas div indica si el numero n tiene primos o no y es un booleano: puede ser True o False. 
+b) Si se podria agregando la clausala de consulta de tieneMasDiv dentro del for y es es True romperia el ciclo con un continue o break
+
+c) 	if not tieneMasDiv:
+		print(n, 'Es primo')
+	else:
+		print(n, 'No es primo')
+		
+d) i = 2
+
+3--------------------------------------
+
+#PRIMERA SOLUCION
+import random
+
+nombre = input('Ingrese su Nombre: ')
+apellido = input('Ingrese su Apellido: ')
+try:
+    if nombre and apellido:
+        clave = f'{nombre[0].upper()}{random.randrange(1, 999)}{apellido[-2:]}'
+        print(clave)
+        input("Presiones cualquier tecla para finalizar")
+    else:
+        print('No ha ingresado valores')
+except Exception as error:
+    print(error)
+
+
+
+#SEGUNDA SOLUCION MAS FACIL EN EL MANEJO DE STRINGS
+import random
+
+nombre = input('Ingrese su Nombre: ')
+apellido = input('Ingrese su Apellido: ')
+try:
+    if nombre and apellido:
+        clave = f'{nombre[0].upper()}{random.randrange(1, 999)}{apellido[len(apellido)-2]}{apellido[len(apellido)-1]}'
+        print(clave)
+        input("Presiones cualquier tecla para finalizar")
+    else:
+        print('No ha ingresado valores')
+except Exception as error:
+    print(error)
+
+
+4------------------------------------------
+
+import math
+
+n = int(input("Ingrese un numero entero: "))
+i = 0
+
+suma = 0
+
+while i < n:
+    print(f'{(1 + i) * math.pow((-1), i) } / {math.pow(n-2, i)}')
+    result = ((1 + i) * math.pow((-1), i) / math.pow(n-2, i))
+    print(result)
+    print('\n')
+    suma = suma + result
+    i += 1
+    result = 0
+
+print(f'Resultado: {suma}')
+
+
