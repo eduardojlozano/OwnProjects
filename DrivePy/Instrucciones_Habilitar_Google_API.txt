@@ -1,0 +1,15 @@
+para habilitar la cuenta de google y la api de google drive:
+
+- Install pydrive con pip: pip install pydrive.
+- Entrar a la pagina https://medium.com/swlh/google-drive-api-with-python-part-i-set-up-credentials-1f729cb0372b y seguir los pasos:
+	- Entrar a la la Google Console Page: https://console.developers.google.com/ para configurar la api.
+	- Ir al Navigator Bar -> Api & Services -> Dashboard y crear un proyecto que se asociará a la app de escritorio.
+	- Si no hay proyecto creado crear uno con CREAR.
+	- Habilitar Google Drive API: Estando en el Dashboard del Proyecto ir a ENABLE APIS AND SERVICES, buscar la api Google Drive API y darle habilitar ENABLE.
+	- Crear credenciales para poder autenticar cuando trates de conectarte a los recursos de Google Drive.
+	- Seguir los pasos de la pagina...
+	
+Por ulitmo para poder realizar la conexion se debe pasar la api a produccion de la siguiente manera:
+	- En el menu lateral de la Cosanole.cloud.google ir a "API y servicios" -> "Pantalla de consentimiento" y alli elegir "PUBLICAR LA APLICACION"
+	- Y listo. Cuando Ramon intente enviar datos a Drive por primera vez se deberá confirmar el acceso de la cuenta de google a drive.
+	- Por ultimo, ingresar al main.py y mmodificar la variable path segun corresponda.
