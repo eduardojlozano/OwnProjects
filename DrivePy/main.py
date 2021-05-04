@@ -30,6 +30,7 @@ class Connection:
                 f = drive.CreateFile({'title': x})
                 f.SetContentFile(os.path.join(path, x))
                 f.Upload()
+                print('File uploaded: ' + x)
 
                 # Debido a un error conocido en pydrive, si no vaciamos la variable utilizada para subir los archivos a
                 # Google Drive, el archivo permanece abierto en la memoria y provoca una fuga de memoria, evitando así su eliminacion.
